@@ -1,12 +1,13 @@
 {
   "round": 1,
   "coverage": {
-    "queries_provided": 58,
+    "queries_provided": 61,
     "queries_total": 150,
-    "missing": "59-150",
+    "provided": "1-58, 124, 126, 150",
+    "missing": "59-123, 125, 127-149",
     "notes": [
-      "q1 row was truncated; remaining fields inferred as baseline (score 0.3544 matches the other container_count sweeps)",
-      "unlabeled row before q57 assumed to be q58"
+      "q1 row was truncated; remaining fields inferred as baseline",
+      "unlabeled row before q57 taken as q58; q48 screenshot confirms the numbering"
     ]
   },
   "baseline": {
@@ -355,8 +356,9 @@
     }
   ],
   "saturation": {
-    "score": 0.9559,
-    "queries": [
+    "corner_score": 0.9559,
+    "corner_queries": [
+      48,
       49,
       51,
       52,
@@ -367,11 +369,65 @@
       57,
       58
     ],
-    "note": "plateau when discrepancy=1, seizures=5, route_age=18, shipper_score=900, years=40; extra inputs don't move it"
+    "late_scores": {
+      "q124": 0.9802,
+      "q126": 0.9805,
+      "q150": 0.9807
+    },
+    "note": "0.9559 at the corner (ratio 1, seizures 5, route 18, score 900, years 40, declared 0) is not the ceiling. Interior points reach 0.98+. Near 0.98 the score barely moves with inputs.",
+    "late_queries": {
+      "124": {
+        "score": 0.9802,
+        "inputs": {
+          "container_count": 65.0,
+          "declared_value": 10.0,
+          "discrepancy_ratio": 0.97,
+          "port": "D",
+          "prior_shipments": 9.8,
+          "recent_seizures": 4.44,
+          "route_age_days": 27.5,
+          "shipper_score": 880.0,
+          "shipper_years": 30.0,
+          "transfers": 4.8
+        }
+      },
+      "126": {
+        "score": 0.9805,
+        "inputs": {
+          "container_count": 65.0,
+          "declared_value": 9.75,
+          "discrepancy_ratio": 0.97,
+          "port": "D",
+          "prior_shipments": 9.8,
+          "recent_seizures": 4.44,
+          "route_age_days": 27.5,
+          "shipper_score": 880.0,
+          "shipper_years": 30.0,
+          "transfers": 4.8
+        }
+      },
+      "150": {
+        "score": 0.9807,
+        "inputs": {
+          "container_count": 65.0,
+          "declared_value": 9.75,
+          "discrepancy_ratio": 0.9,
+          "port": "D",
+          "prior_shipments": 9.7,
+          "recent_seizures": 4.46,
+          "route_age_days": 27.55,
+          "shipper_score": 895.0,
+          "shipper_years": 30.7,
+          "transfers": 4.85
+        }
+      }
+    }
   },
   "open_questions": [
     "Interactions beyond port C not tested (all sweeps are one-at-a-time)",
     "Counterintuitive directions: higher discrepancy_ratio and recent_seizures raise the score; confirm what the score represents",
-    "q1-q150 gap: 92 queries not analyzed",
+    "User note 'score should be 0.9958' was ambiguous; not used",
+    "89 of 150 queries not analyzed",
+    "Interior points (q124/126/150) share port D, container 65, declared 9.75-10, ratio 0.9-0.97, prior ~9.7-9.8, seizures ~4.45, route 27.5-27.55, score 880-895, years 30-30.7, transfers 4.8-4.85, and score 0.980-0.981 vs 0.9559 at the corner; which input or combination lifts them is untested"
   ]
 }
