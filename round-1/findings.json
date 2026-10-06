@@ -1,18 +1,378 @@
 {
-  "round": "round-1",
-  "team": "BB-XXX",
-  "queries_used": 0,
-  "claims": [
-    {
-      "type": "feature_effect",
-      "feature": "x1",
-      "direction": "increases",
-      "strength": "strong",
-      "confidence": 0.0,
-      "evidence": {
-        "query_ids": [],
-        "summary": "Replace this example claim with your own. Every claim needs evidence."
-      }
+  "round": 1,
+  "coverage": {
+    "queries_provided": 58,
+    "queries_total": 150,
+    "missing": "59-150",
+    "notes": [
+      "q1 row was truncated; remaining fields inferred as baseline (score 0.3544 matches the other container_count sweeps)",
+      "unlabeled row before q57 assumed to be q58"
+    ]
+  },
+  "baseline": {
+    "inputs": {
+      "container_count": 50,
+      "declared_value": 50,
+      "discrepancy_ratio": 0.5,
+      "port": "A",
+      "prior_shipments": 10,
+      "recent_seizures": 2.5,
+      "route_age_days": 46.5,
+      "shipper_score": 600,
+      "shipper_years": 20,
+      "transfers": 3
+    },
+    "score": 0.3544,
+    "decision": "DECLINE"
+  },
+  "decision_threshold_estimate": {
+    "value": 0.5,
+    "evidence": "declines max 0.4732 (q27), approves min 0.5161 (q28)"
+  },
+  "feature_effects": {
+    "container_count": {
+      "range": 0.0,
+      "direction": "inert",
+      "points": [
+        [
+          0.0,
+          0.3544
+        ],
+        [
+          25.0,
+          0.3544
+        ],
+        [
+          50.0,
+          0.3544
+        ],
+        [
+          75.0,
+          0.3544
+        ],
+        [
+          100.0,
+          0.3544
+        ]
+      ]
+    },
+    "declared_value": {
+      "range": 0.1953,
+      "direction": "decreasing then flat (0.5488 at 0 down to ~0.354 by 50; 75->100 within 0.001)",
+      "points": [
+        [
+          0.0,
+          0.5488
+        ],
+        [
+          25.0,
+          0.4313
+        ],
+        [
+          50.0,
+          0.3544
+        ],
+        [
+          75.0,
+          0.3535
+        ],
+        [
+          100.0,
+          0.3546
+        ]
+      ]
+    },
+    "discrepancy_ratio": {
+      "range": 0.4655,
+      "direction": "increasing",
+      "points": [
+        [
+          0.0,
+          0.1797
+        ],
+        [
+          0.25,
+          0.2286
+        ],
+        [
+          0.5,
+          0.3544
+        ],
+        [
+          0.75,
+          0.5599
+        ],
+        [
+          1.0,
+          0.6452
+        ]
+      ]
+    },
+    "port": {
+      "range": 0.0066,
+      "direction": "small categorical effect at center profile",
+      "points": [
+        [
+          "A",
+          0.3544
+        ],
+        [
+          "B",
+          0.3478
+        ],
+        [
+          "C",
+          0.351
+        ],
+        [
+          "D",
+          0.3517
+        ]
+      ]
+    },
+    "prior_shipments": {
+      "range": 0.0,
+      "direction": "inert",
+      "points": [
+        [
+          0.0,
+          0.3544
+        ],
+        [
+          5.0,
+          0.3544
+        ],
+        [
+          10.0,
+          0.3544
+        ],
+        [
+          15.0,
+          0.3544
+        ],
+        [
+          20.0,
+          0.3544
+        ]
+      ]
+    },
+    "recent_seizures": {
+      "range": 0.3446,
+      "direction": "increasing",
+      "points": [
+        [
+          0.0,
+          0.2528
+        ],
+        [
+          1.25,
+          0.297
+        ],
+        [
+          2.5,
+          0.3544
+        ],
+        [
+          3.75,
+          0.5395
+        ],
+        [
+          5.0,
+          0.5974
+        ]
+      ]
+    },
+    "route_age_days": {
+      "range": 0.4497,
+      "direction": "decreasing",
+      "points": [
+        [
+          18.0,
+          0.6585
+        ],
+        [
+          32.0,
+          0.5925
+        ],
+        [
+          46.5,
+          0.3544
+        ],
+        [
+          60.0,
+          0.2684
+        ],
+        [
+          75.0,
+          0.2088
+        ]
+      ]
+    },
+    "shipper_score": {
+      "range": 0.3309,
+      "direction": "increasing",
+      "points": [
+        [
+          300.0,
+          0.1852
+        ],
+        [
+          450.0,
+          0.2383
+        ],
+        [
+          600.0,
+          0.3544
+        ],
+        [
+          750.0,
+          0.4732
+        ],
+        [
+          900.0,
+          0.5161
+        ]
+      ]
+    },
+    "shipper_years": {
+      "range": 0.0928,
+      "direction": "increasing",
+      "points": [
+        [
+          0.0,
+          0.3266
+        ],
+        [
+          10.0,
+          0.3498
+        ],
+        [
+          20.0,
+          0.3544
+        ],
+        [
+          30.0,
+          0.4017
+        ],
+        [
+          40.0,
+          0.4194
+        ]
+      ]
+    },
+    "transfers": {
+      "range": 0.0,
+      "direction": "inert",
+      "points": [
+        [
+          0.0,
+          0.3544
+        ],
+        [
+          0.0,
+          0.3544
+        ],
+        [
+          1.5,
+          0.3544
+        ],
+        [
+          4.5,
+          0.3544
+        ],
+        [
+          6.0,
+          0.3544
+        ]
+      ]
     }
+  },
+  "inert_features": [
+    "container_count",
+    "prior_shipments",
+    "transfers"
+  ],
+  "strongest_effects": [
+    [
+      "discrepancy_ratio",
+      0.4655
+    ],
+    [
+      "route_age_days",
+      0.4497
+    ],
+    [
+      "recent_seizures",
+      0.3446
+    ],
+    [
+      "shipper_score",
+      0.3309
+    ],
+    [
+      "declared_value",
+      0.1953
+    ]
+  ],
+  "port_effect": {
+    "by_profile": {
+      "center (q36-39)": {
+        "A": 0.3544,
+        "B": 0.3478,
+        "C": 0.351,
+        "D": 0.3517
+      },
+      "low (q40-43)": {
+        "A": 0.2247,
+        "B": 0.2351,
+        "C": 0.043,
+        "D": 0.2462
+      },
+      "high (q44-47)": {
+        "A": 0.6708,
+        "B": 0.6684,
+        "C": 0.6686,
+        "D": 0.6614
+      },
+      "saturated (q49-51,54)": {
+        "B": 0.9546,
+        "C": 0.043,
+        "D": 0.9563,
+        "A": 0.9559
+      }
+    },
+    "note": "A/B/D differ by <=0.011; C collapses to 0.0430 in two profiles"
+  },
+  "anomalies": [
+    {
+      "queries": [
+        42,
+        50
+      ],
+      "score": 0.043,
+      "hypothesis": "port C and route_age_days <= ~32 triggers fixed override",
+      "status": "untested"
+    }
+  ],
+  "saturation": {
+    "score": 0.9559,
+    "queries": [
+      49,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58
+    ],
+    "note": "plateau when discrepancy=1, seizures=5, route_age=18, shipper_score=900, years=40; extra inputs don't move it"
+  },
+  "open_questions": [
+    "Interactions beyond port C not tested (all sweeps are one-at-a-time)",
+    "Counterintuitive directions: higher discrepancy_ratio and recent_seizures raise the score; confirm what the score represents",
+    "q1-q150 gap: 92 queries not analyzed",
+    "User note 'score should be 0.9958' was ambiguous; not used"
   ]
 }
