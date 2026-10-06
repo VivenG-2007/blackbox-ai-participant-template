@@ -373,6 +373,5 @@
     "Interactions beyond port C not tested (all sweeps are one-at-a-time)",
     "Counterintuitive directions: higher discrepancy_ratio and recent_seizures raise the score; confirm what the score represents",
     "q1-q150 gap: 92 queries not analyzed",
-    "User note 'score should be 0.9958' was ambiguous; not used"
   ]
 }
