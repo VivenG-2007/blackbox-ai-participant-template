@@ -2,8 +2,8 @@
 
 | Item | Value |
 | :--- | :--- |
-| **Team** | BB-XXX |
-| **Dashboard queries used** | 0 / budget |
+| **Team** | BB-013 |
+| **Dashboard queries used**  |
 | **Evidence reviewed** | 138 supplied Round-2 observations, plus supplied Round-1 observations |
 | **Method** | Controlled comparisons of black-box model outputs |
 | **Best observed score** | 0.9807 |
